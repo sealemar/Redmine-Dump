@@ -1,15 +1,11 @@
 #!/bin/bash
 
+. "`dirname $0`/common.sh"
+
 REDMINE_HOME=/var/www/redmine
-REDMINE_DUMP_DIR=/home/ec2-user/dump/redmine
-CURRENT_DUMP_LINK=current.db.gz
 
 # per official backup guidelines at
 # http://www.redmine.org/projects/redmine/wiki/RedmineInstall#Backups
-
-log() {
-    echo `date '+%Y-%m-%d %H:%M:%S'` - $@
-}
 
 updateSymlink() {
     # drop the dump if it mathces the previous one
