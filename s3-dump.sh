@@ -1,7 +1,6 @@
 #! /bin/bash
 
-# should have AWS_SECRET_ACCESS_KEY and AWS_ACCESS_KEY_ID loaded in environment variables
-
+. "/home/ec2-user/.config/aws/credentials.dump.sh"
 . "`dirname $0`/common.sh"
 
 AWS_REGION="us-west-1"
